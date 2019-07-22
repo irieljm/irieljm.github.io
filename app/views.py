@@ -5,4 +5,4 @@ import requests, json
 
 @app.route('/')
 def index():
-	return render_template_string('hello {{ what }}', what='world')
+	return render_template("cake_designs.html")
