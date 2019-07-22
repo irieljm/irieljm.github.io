@@ -8,51 +8,18 @@ Cake Designs
 
 <div class="container cake_designs">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/IMG_2603.JPG') }}" class="card-img-top img-fluid"
-                     alt="Title">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="float-right">264 <a href="#"><i class="far fa-heart"></i></a></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/IMG_2603.JPG') }}" class="card-img-top img-fluid"
-                     alt="Title">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="float-right">Likes</a>
-                </div>
+    {% for cake in cakes %}
+    <div class="col-md-6">
+        <div class="card">
+            <img src="{{ cake['strMealThumb'] }}" class="card-img-top img-fluid"
+                 alt="{{ cake['strMeal'] }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ cake['strMeal'] }}</h5>
+                <span class="float-right">264 <a href="#"><i class="far fa-heart"></i></a></span>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/IMG_2603.JPG') }}" class="card-img-top img-fluid"
-                     alt="Title">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="float-right">Likes</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/IMG_2603.JPG') }}" class="card-img-top img-fluid"
-                     alt="Title">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="#" class="float-right">Likes</a>
-                </div>
-            </div>
-        </div>
+    {% endfor %}
     </div>
 </div>
 {% endblock %}

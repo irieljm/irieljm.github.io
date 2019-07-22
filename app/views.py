@@ -5,4 +5,6 @@ import requests, json
 
 @app.route('/')
 def index():
-	return render_template("cake_designs.html")
+	url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+	cakes = requests.get(url).json().get("meals", [])
+	return render_template("cake_designs.html", cakes=cakes)
