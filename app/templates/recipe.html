@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Recipe for {{ cake['strMeal'] }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container page-container recipe-container">
+    <h2>{{cake['strMeal']}}</h2>
+    <p>{{cake['strInstructions']}}</p>
+</div>
+
+{% endblock %}

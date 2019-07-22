@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: inherit;
 }
 
+.page-container {
+    margin-top: 30px;
+}
+
 @media (min-width: 992px){
     .navbar {
         position: relative;
@@ -38,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .cake_designs .card {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .cake_designs .card-img-top {
